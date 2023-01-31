@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "prod": "jekuaa-py",
+    "dev": "jekuaapydev1",
+    "test": "jekuaapydev2"
+  },
+  "targets": {},
+  "etags": {}
+}
