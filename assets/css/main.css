@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.subrayado {
+    width: 100px;
+    height: 4px;
+    background: #ff80deff;
+    border: 0;
+    border-radius: 10px;
+}
