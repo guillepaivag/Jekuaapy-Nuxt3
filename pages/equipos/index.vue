@@ -1,9 +1,7 @@
 <template>
     <div>
-        <NuxtLink @click="cerrarSesion"
-            class="">
-            Cerrar Sesión
-        </NuxtLink>
+        <Navbar2></Navbar2>
+        
     </div>
 </template>
 

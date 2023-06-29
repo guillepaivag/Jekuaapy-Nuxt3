@@ -3,10 +3,10 @@ export default defineNuxtConfig({
     app: {
         head: {
             charset: 'utf-16',
-            title: 'Consultoría Legal',
+            title: 'Amplia',
             link: [
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'icon', type: 'image/x-icon', src: '~/assets/image/logo.png'},
             ],
             meta: [
                 { name: 'description', content: 'My amazing site.' },
@@ -41,5 +41,8 @@ export default defineNuxtConfig({
         public: {
             MODO_PROYECTO: 'dev'
         }
-    }
+    },
+    modules: [
+        '@nuxtjs/tailwindcss'
+    ]
 })

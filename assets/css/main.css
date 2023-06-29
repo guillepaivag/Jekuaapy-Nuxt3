@@ -14,3 +14,51 @@
     border: 0;
     border-radius: 10px;
 }
+
+.text-lila{
+    color: #683bce;
+}
+
+.fill-lila{
+    fill: #683bce;
+}
+
+.fondo-lila{
+    background-color: #683bce;
+}
+
+.fondo-lila-hover:hover{
+    background-color: #683bce;
+}
+
+.fondo-lila-medio{
+    background-color: #906FDC;
+}
+
+.fondo-lila-medio-hover:hover{
+    background-color: #906FDC;
+}
+
+.fondo-lila-claro{
+    background-color: #E4E0EE;
+}
+
+.fondo-lila-claro-hover:hover{
+    background-color: #E4E0EE;
+}
+
+.fondo-azul{
+    background-color: #000022;
+}
+
+.fondo-azul-medio{
+    background-color: #10104E;
+}
+
+.fondo-azul-claro{
+    background-color: #1A1A62;
+}
+
+.fondo-azul-claro-hover:hover{
+    background-color: #1A1A62;
+}
