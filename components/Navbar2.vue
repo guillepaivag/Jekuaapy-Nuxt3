@@ -81,42 +81,41 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li v-if="user"
-                                        class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-1 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                                        <div class="flex items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-user" width="20" height="20"
-                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                <circle cx="12" cy="7" r="4" />
-                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                            </svg>
-                                            <span class="ml-2">Mi perfil</span>
-                                        </div>
-                                    </li>
-                                    <li v-if="user"
-                                        class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-1 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help"
+                                <li v-if="user" @click="irPerfil()"
+                                    class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-1 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user"
                                             width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
                                             stroke="currentColor" fill="none" stroke-linecap="round"
                                             stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" />
-                                            <circle cx="12" cy="12" r="9" />
-                                            <line x1="12" y1="17" x2="12" y2="17.01" />
-                                            <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                                            <circle cx="12" cy="7" r="4" />
+                                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                         </svg>
-                                        <span class="ml-2">Centro de ayuda</span>
-                                    </li>
-                                    <li @click="cerrarSesion" v-if="user"
-                                        class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-1 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                            stroke-width="1.5" width="20">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-width="2" d="m19 12-4-4m4 4-4 4m4-4H9m5 9a9 9 0 1 1 0-18" />
-                                        </svg>
-                                        <span class="ml-2">Cerrar sesión</span>
-                                    </li>
+                                        <span class="ml-2">Mi perfil</span>
+                                    </div>
+                                </li>
+                                <li v-if="user"
+                                    class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-1 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help"
+                                        width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <circle cx="12" cy="12" r="9" />
+                                        <line x1="12" y1="17" x2="12" y2="17.01" />
+                                        <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                                    </svg>
+                                    <span class="ml-2">Centro de ayuda</span>
+                                </li>
+                                <li @click="cerrarSesion" v-if="user"
+                                    class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-1 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke-width="1.5" width="20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 12-4-4m4 4-4 4m4-4H9m5 9a9 9 0 1 1 0-18" />
+                                    </svg>
+                                    <span class="ml-2">Cerrar sesión</span>
+                                </li>
                                 <li v-if="!user"
                                     class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-1 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                     <NuxtLink :to="'/inicio-sesion'"
@@ -226,7 +225,7 @@
                         <div class="ml-6 relative">
                             <div class="flex items-center relative" @click="dropdownHandler($event)">
                                 <ul class="p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-16 hidden">
-                                    <li
+                                    <li @click="irPerfil()"
                                         class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                         <div class="flex items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -332,6 +331,10 @@ export default {
             const user = await signOutUser()
             const router = useRouter();
             router.push({ path: "/inicio-sesion" })
+        },
+        irPerfil() {
+            const router = useRouter();
+            router.push({ path: "/perfil" })
         }
     },
 };
