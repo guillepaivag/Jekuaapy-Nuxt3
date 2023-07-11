@@ -10,13 +10,13 @@ export default defineNuxtPlugin((nuxtApp) => {
     defaultUrl.value = '' : ''
     
     config.public.TIPO_PROYECTO === 'dev' && process.env.NODE_ENV === 'production' ? 
-    defaultUrl.value = 'https://southamerica-east1-vilab-dev.cloudfunctions.net/service_usuario' : ''
+    defaultUrl.value = '' : ''
     
     config.public.TIPO_PROYECTO === 'dev' && process.env.NODE_ENV === 'development' ? 
-    defaultUrl.value = 'http://127.0.0.1:7000/vilab-dev/southamerica-east1/service_usuario' : ''
+    defaultUrl.value = 'http://127.0.0.1:7000/jekuaapydev1/southamerica-east1/service_usuario' : ''
 
     config.public.TIPO_PROYECTO === 'test' ? 
-    defaultUrl.value = 'https://southamerica-east1-vilab-test.cloudfunctions.net/service_usuario' : ''
+    defaultUrl.value = '' : ''
 
     const apiUsuario = axios.create({ baseURL: defaultUrl.value })
     // nuxtApp.vueApp.provide('apiUsuario', apiUsuario)
